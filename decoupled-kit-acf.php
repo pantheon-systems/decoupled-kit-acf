@@ -33,11 +33,11 @@ function bootstrap() {
 function enable_deps() {
 	activate_plugin( 'advanced-custom-fields/acf.php' );
 	activate_plugin( 'wp-graphql-acf/wp-graphql-acf.php' );
-	decoupled_kit_acf_create_acf();
+	create_acf();
 	// Check if related post exist & related example post haven't been created yet.
 	if ( post_exists( 'Example Post with Image' ) && ! post_exists( 'Example Post with Related Content' ) ) {
 		if ( ! get_transient( 'decoupled_kit_acf_created_example_post' ) ) {
-			decoupled_kit_acf_create_example_post();
+			create_example_post();
 		}
 	}
 }
@@ -47,7 +47,7 @@ function enable_deps() {
  *
  * @return void
  */
-function decoupled_kit_acf_create_acf() {
+function create_acf() {
 	if ( function_exists( 'acf_add_local_field_group' ) ) :
 		acf_add_local_field_group([
 			'key' => 'group_63f6015588061',
@@ -110,7 +110,7 @@ function decoupled_kit_acf_create_acf() {
  *
  * @return void
  */
-function decoupled_kit_acf_create_example_post() {
+function create_example_post() {
 	$example_post = [
 		'post_title' => 'Example Post with Related Content',
 		'post_content' => 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed augue lacus viverra vitae congue eu consequat. Blandit volutpat maecenas volutpat blandit aliquam etiam erat. Diam vulputate ut pharetra sit amet aliquam id. Quis blandit turpis cursus in hac.',
