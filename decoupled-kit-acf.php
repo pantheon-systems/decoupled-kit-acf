@@ -96,7 +96,7 @@ function create_acf() {
 			'active' => true,
 			'description' => '',
 			'show_in_rest' => 0,
-			'show_in_graphql' => 0,
+			'show_in_graphql' => 1,
 			'graphql_field_name' => 'relatedContent',
 			'map_graphql_types_from_location_rules' => 0,
 			'graphql_types' => '',
