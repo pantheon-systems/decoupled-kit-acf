@@ -1,0 +1,10 @@
+# Ignore vendor dependencies
+vendor/
+wp-content/
+
+# Ignore PHPUnit cache
+.phpunit.result.cache
+
+# Ignore Subversion files
+.svn/
+branches/

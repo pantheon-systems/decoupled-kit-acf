@@ -1,16 +1,40 @@
 {
-    "name": "pantheon-systems/decoupled-kit-acf",
-    "description": "Add examples related to using advanced custom fields on a decoupled WordPress site.",
-    "type": "wordpress-plugin",
-    "require": {
-        "wpackagist-plugin/advanced-custom-fields": "^6.0",
-        "wp-graphql/wp-graphql-acf": "^0.6.1"
-    },
-    "license": "GPL-2.0-or-later",
-    "authors": [
-        {
-            "name": "Abhisek Mazumdar",
-            "email": "abhisekmajumdar4@gmail.com"
-        }
-    ]
+  "name": "pantheon-systems/decoupled-kit-acf",
+  "description": "Add examples related to using advanced custom fields on a decoupled WordPress site.",
+  "type": "wordpress-plugin",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+      {
+        "name": "Abhisek Mazumdar",
+        "email": "abhisekmajumdar4@gmail.com"
+      }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    }
+  ],
+  "require": {
+    "wpackagist-plugin/advanced-custom-fields": "^6.0",
+    "wp-graphql/wp-graphql-acf": "^0.6.1"
+  },
+  "require-dev": {
+    "pantheon-systems/pantheon-wp-coding-standards": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+        "dealerdirect/phpcodesniffer-composer-installer": true,
+        "sort-packages": true,
+        "composer/installers": true
+      }
+  },
+  "scripts": {
+    "lint:php": "find ./decoupled-kit-acf.php -name '*.php' -exec php -l {} \\;",
+    "lint:phpcs": "phpcs -s --ignore=tests/*,wp-content/* --standard=Pantheon-WP . -d error_reporting=\"E_ALL&~E_DEPRECATED\"",
+    "lint:phpcbf": "phpcbf -s --ignore=tests/*,,wp-content/* --standard=Pantheon-WP . -d error_reporting=\"E_ALL&~E_DEPRECATED\"",
+    "lint": "composer lint:php && composer lint:phpcs",
+    "phelp": "phpcbf --help"
+  }
 }
