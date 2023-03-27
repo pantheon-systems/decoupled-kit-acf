@@ -32,8 +32,9 @@
   },
   "scripts": {
     "lint:php": "find ./decoupled-kit-acf.php -name '*.php' -exec php -l {} \\;",
-    "lint:phpcs": "phpcs -s --ignore=tests/* --standard=Pantheon-WP .",
-    "lint:phpcbf": "phpcbf -s --ignore=tests/* --standard=Pantheon-WP .",
-    "lint": "composer lint:php && composer lint:phpcs"
+    "lint:phpcs": "phpcs -s --ignore=tests/*,wp-content/* --standard=Pantheon-WP . -d error_reporting=\"E_ALL&~E_DEPRECATED\"",
+    "lint:phpcbf": "phpcbf -s --ignore=tests/*,,wp-content/* --standard=Pantheon-WP . -d error_reporting=\"E_ALL&~E_DEPRECATED\"",
+    "lint": "composer lint:php && composer lint:phpcs",
+    "phelp": "phpcbf --help"
   }
 }
