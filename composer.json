@@ -1,6 +1,6 @@
 {
   "name": "pantheon-systems/decoupled-kit-acf",
-  "description": "Add examples related to using advanced custom fields on a decoupled WordPress site.",
+  "description": "Adds examples related to using advanced custom fields on a decoupled WordPress site.",
   "type": "wordpress-plugin",
   "license": "GPL-2.0-or-later",
   "authors": [

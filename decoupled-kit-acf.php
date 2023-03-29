@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:     Pantheon Decoupled for Advanced Custom Fields
+ * Plugin Name:     Decoupled Kit Advanced Custom Fields
  * Plugin URI:      https://pantheon.io/
  * Description:     Add examples related to using advanced custom fields on a decoupled WordPress site.
  * Version:         0.1.0
