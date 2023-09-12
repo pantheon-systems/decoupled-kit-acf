@@ -21,7 +21,7 @@
     "wp-graphql/wp-graphql-acf": "^0.6.1"
   },
   "require-dev": {
-    "pantheon-systems/pantheon-wp-coding-standards": "^1.0"
+    "pantheon-systems/pantheon-wp-coding-standards": "^2.0"
   },
   "config": {
     "allow-plugins": {
